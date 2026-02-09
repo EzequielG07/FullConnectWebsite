@@ -1,0 +1,303 @@
+/* Variables de color para fácil edición */
+:root {
+    --primary-color: #2563eb; /* Azul principal */
+    --secondary-color: #0f172a; /* Azul muy oscuro */
+    --text-light: #f8fafc;
+    --text-dark: #1e293b;
+    --accent-color: #38bdf8; /* Celeste */
+}
+
+/* Estilos Generales */
+html {
+    scroll-behavior: smooth;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.nav-link {
+    padding: 0.5rem 1.5rem;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 100px 0;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title span {
+    color: var(--accent-color);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    margin-bottom: 2.5rem;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--primary-color);
+    padding: 1rem 2.5rem;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 2px solid white;
+    padding: 1rem 2.5rem;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: var(--secondary-color);
+}
+
+.btn-primary-sm {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+}
+
+/* Cards de Servicios */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.icon-main {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 60px 0 20px 0;
+}
+
+.social-icon:hover {
+    color: var(--accent-color);
+    transition: 0.3s;
+}
+
+/* Estilos del Modal */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.8); /* Fondo oscuro translúcido */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    justify-content: center;
+    flex-wrap: wrap; /* Si el nombre es largo, se ponen uno abajo del otro */
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.flex {
+    justify-content: center;
+    flex-wrap: wrap; /* Si el nombre es largo, se ponen uno abajo del otro */
+}
+
+.input-field {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-field:focus {
+    border-color: var(--primary-color);
+}
+
+/* Botones del Formulario */
+.btn-cancelar {
+    flex: none; /* Quita el flex: 1 o flex: 2 */
+    width: fit-content; /* Se ajusta al texto */
+    padding: 0.75rem 2rem; /* Le da un buen aire a los costados */
+    margin: 0 auto; /* Los centra si el contenedor es flex-col */
+    border-radius: 10px;
+    font-weight: 600;
+    color: #64748b;
+    background: #f1f5f9;
+    transition: 0.3s;
+}
+
+.btn-cancelar:hover {
+    background: #e2e8f0;
+}
+
+.btn-enviar-desactivado {
+    flex: none; /* Quita el flex: 1 o flex: 2 */
+    width: fit-content; /* Se ajusta al texto */
+    padding: 0.75rem 2rem; /* Le da un buen aire a los costados */
+    margin: 0 auto; /* Los centra si el contenedor es flex-col */
+    border-radius: 10px;
+    font-weight: 600;
+    background: #cbd5e1;
+    color: #94a3b8;
+    cursor: not-allowed;
+}
+
+.btn-enviar-activo {
+    flex: none; /* Quita el flex: 1 o flex: 2 */
+    width: fit-content; /* Se ajusta al texto */
+    padding: 0.75rem 2rem; /* Le da un buen aire a los costados */
+    margin: 0 auto; /* Los centra si el contenedor es flex-col */
+    border-radius: 10px;
+    font-weight: 600;
+    background: var(--primary-color);
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-enviar-activo:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Estilos para el menú móvil desplegado */
+@media (max-width: 768px) {
+    /* Contenedor de los links */
+    #navLinks {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* CENTRA los botones horizontalmente */
+        justify-content: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        text-align: center;
+        z-index: 40;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #f1f5f9;
+
+        /* Estado inicial para la animación de "persiana" */
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Estado cuando el menú está abierto */
+    #navLinks.mobile-active {
+        max-height: 500px; /* Altura suficiente para los links */
+        opacity: 1;
+        padding: 2.5rem 1.5rem;
+        pointer-events: auto;
+    }
+
+    /* Ajuste para que los links y el botón NO se estiren */
+    #navLinks > * {
+        margin-left: 0 !important; /* Elimina el margen lateral de escritorio */
+        width: max-content !important; /* El botón mide lo que mide su texto */
+        min-width: 160px; /* Opcional: le da un ancho mínimo base */
+        display: inline-block;
+        opacity: 0;
+        transition: opacity 0.3s ease 0.2s;
+    }
+
+    /* Muestra los elementos uno a uno con la animación */
+    #navLinks.mobile-active > * {
+        opacity: 1;
+    }
+
+    /* Botones del Hero (Ver Servicios / Saber Más) en móvil */
+    .hero-section .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: max-content !important;
+        min-width: 200px; /* Hace que los botones del hero se vean más robustos */
+    }
+}
