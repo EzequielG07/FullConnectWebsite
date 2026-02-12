@@ -333,3 +333,37 @@ html {
     scroll-padding-top: 85px;
     scroll-behavior: smooth; /* Esto hace que el deslizamiento sea suave */
 }
+
+/* Animación de entrada para el modal */
+#modalNosotros.flex {
+    animation: fadeIn 0.3s ease-out;
+}
+
+#modalNosotros .bg-white {
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Para evitar que la página haga scroll cuando el modal está abierto */
+.no-scroll {
+    overflow: hidden;
+}

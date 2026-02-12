@@ -4,6 +4,11 @@ const form = document.getElementById('formContacto');
 const btnEnviar = document.getElementById('btnEnviar');
 const btnCancelar = document.getElementById('btnCancelar');
 const inputs = form.querySelectorAll('input, textarea');
+// Selección de elementos modal nosotros
+const modalNosotros = document.getElementById('modalNosotros');
+const btnAbrirNosotros = document.querySelector('a[href="#nosotros"]'); // Asegúrate que tu botón tenga href="#nosotros" o una ID
+const btnCerrarNosotros = document.getElementById('btnCerrarNosotros');
+const cerrarFondo = document.getElementById('cerrarModalFondo');
 
 /**
  * Lógica para abrir el Modal
@@ -87,7 +92,7 @@ form.addEventListener('submit', (e) => {
     // 4. Construimos la URL de WhatsApp (reemplazando espacios por %20 y saltos de línea)
     // El %0A es para saltos de línea en WhatsApp
     const urlWhatsApp = `https://api.whatsapp.com/send?phone=${miNumeroWhatsApp}&text=${encodeURIComponent(
-        textoMensaje.replace(/%n/g, '\n')
+        textoMensaje.replace(/%n/g, '\n'),
     )}`;
 
     // 5. Abrimos WhatsApp en una nueva pestaña
@@ -125,4 +130,31 @@ document.querySelectorAll('#navLinks a').forEach((link) => {
         icono.classList.replace('fa-times', 'fa-bars');
         icono.style.transform = 'rotate(0deg)';
     });
+});
+
+// Función Abrir
+const abrirModalNos = (e) => {
+    e.preventDefault();
+    modalNosotros.classList.remove('hidden');
+    modalNosotros.classList.add('flex');
+    document.body.classList.add('no-scroll');
+};
+
+// Función Cerrar
+const cerrarModalNos = () => {
+    modalNosotros.classList.add('hidden');
+    modalNosotros.classList.remove('flex');
+    document.body.classList.remove('no-scroll');
+};
+
+// Eventos
+if (btnAbrirNosotros) {
+    btnAbrirNosotros.addEventListener('click', abrirModalNos);
+}
+btnCerrarNosotros.addEventListener('click', cerrarModalNos);
+cerrarFondo.addEventListener('click', cerrarModalNos);
+
+// Cerrar con tecla Escape
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') cerrarModalNos();
 });

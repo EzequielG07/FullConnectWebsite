@@ -42,7 +42,7 @@
                 </p>
                 <div class="flex flex-col md:flex-row justify-center items-center gap-4">
                   <a href="#servicios" class="btn-primary w-fit">Ver Servicios</a>
-                  <a href="#" class="btn-secondary w-fit">Sobre nosotros</a>
+                  <a href="#nosotros" class="btn-secondary w-fit">Sobre nosotros</a>
               </div>
             </div>
         </header>
@@ -289,6 +289,44 @@
               </form>
           </div>
       </div>
+
+      <div id="modalNosotros" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm" id="cerrarModalFondo"></div>
+    
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl overflow-hidden relative z-10 transform transition-all">
+        <div class="bg-blue-600 p-6 text-white flex justify-between items-center">
+            <h3 class="text-2xl font-bold">Sobre FullConnect</h3>
+            <button id="btnCerrarNosotros" class="text-white hover:text-blue-200 transition-colors">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+        </div>
+        
+        <div class="p-8 max-h-[70vh] overflow-y-auto">
+            <div class="space-y-4 text-slate-600 leading-relaxed">
+                <p class="font-semibold text-blue-600 text-lg">Tecnología a tu medida.</p>
+                <p>
+                    En <strong>FullConnect</strong>, nacimos con la misión de simplificar la complejidad tecnológica para hogares y empresas. Con años de experiencia en el sector de redes y seguridad, entendemos que cada cliente tiene necesidades únicas.
+                </p>
+                <p>
+                    Nos especializamos en el diseño, implementación y mantenimiento de infraestructuras críticas, desde la configuración de nodos de red de alto rendimiento hasta sistemas de videovigilancia inteligente.
+                </p>
+                <div class="grid grid-cols-2 gap-4 py-4">
+                    <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-blue-600">
+                        <span class="block font-bold text-slate-800">Misión</span>
+                        Proveer conectividad estable y seguridad real.
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-blue-600">
+                        <span class="block font-bold text-slate-800">Visión</span>
+                        Ser el referente regional en soluciones IT personalizadas.
+                    </div>
+                </div>
+                <p>
+                    No solo instalamos equipos; creamos ecosistemas digitales eficientes, seguros y escalables.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
   
       <script src="script.js"></script>
   </body>
