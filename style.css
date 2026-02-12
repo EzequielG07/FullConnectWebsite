@@ -148,6 +148,32 @@ html {
     transition: 0.3s;
 }
 
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.05); /* Un círculo sutil de fondo */
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px); /* Pequeño salto hacia arriba */
+}
+
+footer p.italic {
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+}
+
+/* Efecto hover extra para los iconos del footer */
+.social-icon:hover i {
+    transform: scale(1.1);
+}
+
 /* Estilos del Modal */
 .modal-overlay {
     position: fixed;

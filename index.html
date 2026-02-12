@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Expertos en Redes y Seguridad | Tu Marca</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
 
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -12,7 +13,11 @@
     <body class="bg-slate-50 text-slate-900">
       <nav class="navbar shadow-md sticky top-0 z-50 bg-white">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="logo">Full<span class="text-blue-600">Tech</span></div>
+         <div class="logo-container">
+    <a href="#inicio">
+        <img src="FullConnectLogo.png" alt="Logo FullConnect" class="h-12 md:h-16 w-auto object-contain transition-transform duration-300 hover:scale-105">
+    </a>
+</div>
             
             <button id="menuBtn" class="md:hidden text-2xl text-slate-800 focus:outline-none">
                 <i class="fas fa-bars"></i>
@@ -37,7 +42,7 @@
                 </p>
                 <div class="flex flex-col md:flex-row justify-center items-center gap-4">
                   <a href="#servicios" class="btn-primary w-fit">Ver Servicios</a>
-                  <a href="#" class="btn-secondary w-fit">Saber Más</a>
+                  <a href="#" class="btn-secondary w-fit">Sobre nosotros</a>
               </div>
             </div>
         </header>
@@ -45,7 +50,7 @@
         <section id="servicios" class="py-20 px-6">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Nuestras Especialidades</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Nuestros Servicios</h2>
                     <div class="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
                 </div>
 
@@ -69,8 +74,7 @@
                                 empresariales.
                             </li>
                             <li>
-                                <i class="fas fa-check text-blue-500 mr-2"></i>Diagnóstico y resolución de cuellos de
-                                botella.
+                                <i class="fas fa-check text-blue-500 mr-2"></i>Diagnóstico y optimización del rendimiento.
                             </li>
                         </ul>
                     </div>
@@ -145,7 +149,7 @@
                             </li>
                             <li><i class="fas fa-check text-blue-500 mr-2"></i>Alarmas inteligentes sin cables</li>
                             <li>
-                                <i class="fas fa-check text-blue-500 mr-2"></i>Cerco eléctrico y sensores perimetrales.
+                                <i class="fas fa-check text-blue-500 mr-2"></i>Sensores perimetrales.
                             </li>
                         </ul>
                     </div>
@@ -190,7 +194,7 @@
                             <li><i class="fas fa-check text-blue-500 mr-2"></i>Asistencia remota inmediata</li>
                             <li>
                                 <i class="fas fa-check text-blue-500 mr-2"></i>Formateo e instalación de sistemas
-                                operativos.
+                                operativos y programas.
                             </li>
                         </ul>
                     </div>
@@ -224,17 +228,46 @@
             </div>
         </section>
 
-        <footer id="contacto" class="footer">
-            <div class="max-w-7xl mx-auto text-center px-6">
-                <h2 class="text-3xl font-bold mb-4">¿Listo para empezar?</h2>
-                <p class="mb-8 opacity-70">Contáctanos hoy para un presupuesto personalizado.</p>
-                <div class="flex justify-center gap-6 text-2xl mb-8">
-                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" class="social-icon"><i class="far fa-envelope"></i></a>
-                </div>
-                <p class="text-sm opacity-50">&copy; 2026 FullConnect. Expertos en tecnología.</p>
+   <footer class="bg-slate-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+        
+        <div class="flex flex-col items-center md:items-start">
+            <img src="FullConnectLogo.png" alt="Logo FullConnect" class="h-10 w-auto mb-4 brightness-0 invert">
+            <div class="text-center md:text-left">
+                <p class="text-lg font-semibold text-white">FullConnect</p>
+                <p class="text-blue-400 text-sm italic mb-2">Tecnología a tu medida.</p>
+                <p class="text-slate-500 text-xs">
+                    © 2026 Todos los derechos reservados.
+                </p>
             </div>
-        </footer>
+        </div>
+
+        <div class="flex flex-col items-center gap-4">
+            <span class="text-slate-400 text-sm font-medium">Contáctanos</span>
+            <div class="flex space-x-5">
+                <a href="https://wa.me/5491123126749?text=Hola%20FullConnect!%20Quisiera%20hacer%20una%20consulta." 
+                   target="_blank" 
+                   class="social-icon group"
+                   title="Escríbenos por WhatsApp">
+                   <i class="fab fa-whatsapp text-2xl group-hover:text-green-500 transition-colors"></i>
+                </a>
+
+                <a href="https://www.instagram.com/tu_usuario_fullconnect/" 
+                   target="_blank" 
+                   class="social-icon group"
+                   title="Síguenos en Instagram">
+                   <i class="fab fa-instagram text-2xl group-hover:text-pink-500 transition-colors"></i>
+                </a>
+
+               <a href="#contacto" class="social-icon group" title="Envíanos un mensaje">
+   <i class="far fa-envelope text-2xl group-hover:text-blue-400 transition-colors"></i>
+</a>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</footer>
 
         <div id="modalContacto" class="modal-overlay hidden">
           <div class="modal-content">
