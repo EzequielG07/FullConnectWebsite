@@ -327,3 +327,9 @@ footer p.italic {
         min-width: 200px; /* Hace que los botones del hero se vean más robustos */
     }
 }
+
+html {
+    /* Ajusta los 80px según la altura real de tu navbar (aprox. h-20 de Tailwind) */
+    scroll-padding-top: 85px;
+    scroll-behavior: smooth; /* Esto hace que el deslizamiento sea suave */
+}
