@@ -12,11 +12,9 @@ html {
     scroll-behavior: smooth;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: -1px;
-}
+/* .logo-container {
+    border: solid 2px red;
+} */
 
 .nav-link {
     padding: 0.5rem 1.5rem;
